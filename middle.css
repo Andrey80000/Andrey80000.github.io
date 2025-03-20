@@ -1,0 +1,89 @@
+/*Продукти*/
+.products {
+    text-align: center;
+    height: max-content;
+}
+
+.products-list ul li {
+    list-style: none;
+    display: inline-block;
+    width: 14%;
+}
+
+.products-list {
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+/*VissionMission*/
+
+.VissionMission {
+    background: #F7F7F7 url('../images/Vision_Mission_background.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 950px;
+}
+
+.VissionMission img {
+    width: 90%;
+}
+
+.tochki {
+    padding-top: 5px;
+    padding-bottom: 7px;
+    color:#57984C;
+
+}
+
+.VissionMission .row1 {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+.VissionMission .row1 .coll {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.VissionMission .row2 {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.VissionMission .row2 .colr {
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+/*MainActivities*/
+
+.MainActivities {
+    height: 500px;
+    background: #EDEDED;
+    padding-top: 50px;
+}
+
+.MainActivities .row2 {
+    color: #57984C;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.MainActivities .row2 .col-4 p {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    width: max-content;
+    border-bottom: 1px solid #57984C;
+}
+
+.MainActivities .row3 {
+    padding-top: 10px;
+}
+
+.MainActivities .row3 .col-4 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
