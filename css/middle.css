@@ -221,43 +221,34 @@
 }
 
 /*Ліва частина*/
-.tomatoone-content .leftside {
-    width: 50%;
-    float: left;
-}
 
-.tomatoone-content .leftside h2 {
+.tomatoone-content .col1 h2 {
     color: #57984C;
 }
 
-.tomatoone-content .leftside .slogan {
+.tomatoone-content .col1 .slogan {
     width: 80%;
     margin-bottom: 25px;
 }
 
-.tomatoone-content .leftside .slogan img {
+.tomatoone-content .col1 .slogan img {
     width: 14%;
     margin-right: 20px;
     float: left;
 }
 
-.tomatoone-content .leftside .slogan h4 {
+.tomatoone-content .col1 .slogan h4 {
     color: #CF2333;
 }
 
 /*Права частина*/
 
-.tomatoone-content .rightside {
-    width: 50%;
-    float: right;
-}
-
-.tomatoone-content .rightside img {
+.tomatoone-content .col2 img {
     width: 80%;
     margin-bottom: 20px;
 }
 
-.tomatoone-content .rightside .dwnld-button {
+.tomatoone-content .col2 .dwnld-button {
     width: max-content;
     padding: 0 15px 0;
     border: 3px solid #57984C;
@@ -268,7 +259,7 @@
     margin-bottom: 20px;
 }
 
-.tomatoone-content .rightside .dwnld-button img {
+.tomatoone-content .col2 .dwnld-button img {
     width: 30%;
     padding: 5px 10px 8px;
     margin: 0;
