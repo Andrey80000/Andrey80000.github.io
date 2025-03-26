@@ -1,3 +1,7 @@
+.clear {
+    clear: both;
+}
+
 /*Homepage (index.html)*/
 /*Продукти*/
 
@@ -33,8 +37,8 @@
 }
 
 .tochki {
-    padding-top: 5px;
-    padding-bottom: 7px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     color:#57984C;
 
 }
@@ -162,10 +166,110 @@
     padding-top: 10px;
     position: absolute;
     bottom: 0;
-    color: #57984C;
     background-color: white;
 }
 
-.tomatoall-content .choto2 .row .col-4 div h5 {
+.tomatoall-content .choto2 .row .col-4 div a {
+    color: #57984C;
+    text-decoration: none;
+}
+
+.tomatoall-content .choto2 .row .col-4 div a h5 {
+    margin: 0;
+}
+
+/*Tomato one (Tomato_one.html)*/
+
+.tomatoone-content {
+    background: #F7F7F7 url('../images/Tomatoone_content_background.png');
+    background-size: 75% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: max-content;
+    padding: 10px 0px 100px;
+}
+
+.tomatoone-content .link {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.tomatoone-content a {
+    color: #57984C;
+    text-decoration: none;
+}
+
+.tomatoone-content .caption {
+    color: #57984C;
+    font-weight: bold;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #57984C;
+    width: 30%;
+}
+
+.tomatoone-content .list {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.tomatoone-content .list li {
+    margin-bottom: 10px;
+}
+
+.tomatoone-content .list li::marker {
+    color: #57984C;
+}
+
+/*Ліва частина*/
+.tomatoone-content .leftside {
+    width: 50%;
+    float: left;
+}
+
+.tomatoone-content .leftside h2 {
+    color: #57984C;
+}
+
+.tomatoone-content .leftside .slogan {
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.tomatoone-content .leftside .slogan img {
+    width: 14%;
+    margin-right: 20px;
+    float: left;
+}
+
+.tomatoone-content .leftside .slogan h4 {
+    color: #CF2333;
+}
+
+/*Права частина*/
+
+.tomatoone-content .rightside {
+    width: 50%;
+    float: right;
+}
+
+.tomatoone-content .rightside img {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.tomatoone-content .rightside .dwnld-button {
+    width: max-content;
+    padding: 0 15px 0;
+    border: 3px solid #57984C;
+    border-radius: 50px;
+    white-space: nowrap;
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 20px;
+}
+
+.tomatoone-content .rightside .dwnld-button img {
+    width: 30%;
+    padding: 5px 10px 8px;
     margin: 0;
 }
