@@ -264,3 +264,84 @@
     padding: 5px 10px 8px;
     margin: 0;
 }
+
+/*Contact us (Contact.html)*/
+
+.contact-info {
+    height: max-content;
+    padding: 40px 0 30px;
+    background-color: #F7F7F7;
+}
+
+.contact-info p {
+    margin: 15px 0 5px;
+}
+
+.contact-info select {
+    width: 100%;
+    border: 1px solid lightgrey;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.contact-info .contact-input {
+    width: 80%;
+    border: 1px solid lightgrey;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.contact-info .col2 .contact-input {
+    width: 100%;
+}
+
+.contact-info .col2 textarea {
+    width: 100%;
+    height: 320px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.contact-info .col2 .code-input {
+    width: 39%;
+    border: 1px solid lightgrey;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.contact-info .col2 img {
+    padding-top: 10px;
+}
+
+.contact-info .col2 .sumbit-button {
+    color: white;
+    text-align: center;
+    background-color: #57984C;
+    border: 0;
+    border-radius: 50px;
+    width: 40%;
+    height: 50px;
+}
+
+.adress {
+    padding: 30px 0 20px;
+}
+
+.adress .conteiner .caption {
+    color: #57984C;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1.5px solid #57984C;
+    padding: 0 20px 8px;
+}
+
+.adress a {
+    color: #57984C;
+    text-decoration: none;
+}
+
+.adress .conteiner {
+    width: max-content;
+    margin: 0 auto;
+}

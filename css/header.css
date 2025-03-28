@@ -91,3 +91,13 @@
     height: 380px;
     background-repeat: no-repeat;
 }
+
+/*Contact us (Contact.html)*/
+/*Банер*/
+
+.contact-banner {
+    background: url('../images/Contact-banner.jpg');
+    background-size: 100% auto;
+    height: 380px;
+    background-repeat: no-repeat;
+}
