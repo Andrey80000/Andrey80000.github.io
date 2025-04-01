@@ -1,0 +1,724 @@
+#menu-toggle {
+    display: none;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.mobile-photo-button {
+    display: none;
+}
+
+.mobile-photo-button img {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.mobile-photo-button .dwnld-button {
+    width: max-content;
+    padding: 0 15px 0;
+    border: 3px solid #57984C;
+    border-radius: 50px;
+    white-space: nowrap;
+    margin-right: 20%;
+}
+
+.mobile-photo-button .dwnld-button a {
+    font-size: 11px;
+}
+
+.mobile-photo-button .dwnld-button a img {
+    width: 25%;
+    padding: 5px 10px 8px 0;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .header-menu {
+        margin-top: 5px;
+    }
+
+    .header-menu ul {
+        padding-left: 0;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid #ccc;
+    }
+
+    .header-menu ul li {
+        padding-left: 0;
+    }
+
+    #menu-toggle:checked + .burger-menu + ul {
+        display: flex;
+    }
+
+    /*Homepage (index.html)*/
+
+    .homepage-banner .conteiner {
+        height: 230px;
+    }
+
+    .products-list ul {
+        padding-left: 0;
+    }
+
+    .products-list ul li {
+        padding-top: 30px;
+        width: 20%;
+    }
+
+    .products-list {
+        margin-top: 0;
+    }
+
+    .homepage-banner-button {
+        width: 15%;
+    }
+
+    /*Tomato all (Tomato_all.html)*/
+
+    .tomatoall-banner {
+        height: 250px;
+    }
+
+    .tomatoall-content {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .tomatoall-content .choto .col-4 .row1 {
+        height: 20%;
+    }
+
+    /*Tomato one (Tomato_one.html)*/
+
+    .tomatoone-content {
+        padding-left: 70px;
+        padding-right: 50px;
+    }
+
+    /*Contact us (Contact.html)*/
+
+    .contact-info {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .contact-banner {
+        height: 260px;
+    }
+
+    .contact-info .col2 .code-input {
+        width: 38%;
+    }
+
+    .contact-info .col2 .sumbit-button {
+        width: 38%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /*Homepage (index.html)*/
+
+    .header-search {
+        margin-right: 20px;
+    }
+
+    .header-logo {
+        margin-left: 20px;
+    }
+    
+    .burger-menu {
+        margin-right: 20px;
+    }
+    
+    .homepage-banner .conteiner {
+        height: 175px;
+    }
+
+    .products-list ul li {
+        padding-top: 30px;
+        font-size: 15px;
+    }
+
+    .VissionMission {
+        height: 800px;
+    }
+
+    .MainActivities .row1-img {
+        width: 80%;
+    }
+
+    .MainActivities .row2 {
+        font-size: 18px;
+    }
+
+    .MainActivities .row3 {
+        font-size: 15px;
+    }
+
+    /*Tomato all (Tomato_all.html)*/
+
+    .tomatoall-banner {
+        height: 190px;
+    }
+
+    .tomatoall-content .choto2 .col-4 {
+        width: 50%;
+    }
+
+    /*Tomato one (Tomato_one.html)*/
+
+    .tomatoone-content {
+        height: 800px;
+    }
+
+    .tomatoone-content h1 {
+        font-size: 25px;
+    }
+
+    .tomatoone-content h2 {
+        font-size: 22px;
+    }
+
+    .tomatoone-content p {
+        font-size: 14px;
+    }
+
+    .tomatoone-content ul li {
+        font-size: 14px;
+    }
+
+    .tomatoone-content .slogan h4 {
+        font-size: 16px;
+    }
+
+    .tomatoone-content .col2 .dwnld-button a img {
+        width: 27%;
+    }
+
+    .tomatoone-content .col2 .dwnld-button a {
+        font-size: 13px;
+    }
+
+    /*Contact us (Contact.html)*/
+
+    .contact-banner {
+        height: 195px;
+    }
+
+    .contact-info {
+        font-size: 13px;
+    }
+
+    .adress {
+        font-size: 14px;
+    }
+
+    .contact-info h1 {
+        font-size: 27px;
+    }
+
+    .contact-info .col2 .code-input {
+        width: 33%;
+        height: 40px;
+    }
+
+    .contact-info .col2 .sumbit-button {
+        width: 33%;
+        height: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    /*Homepage (index.html)*/
+
+    .homepage-banner h1 {
+        font-size: 25px;
+        margin-top: 8%;
+        margin-bottom: 2%;
+    }
+
+    .homepage-banner .homepage-banner-button {
+        font-size: 10px;
+        height: 30px;
+        width: 15%;
+    }
+
+    .homepage-banner .conteiner {
+        height: 130px;
+    }
+
+    .products-list ul li {
+        padding-top: 20px;
+        width: 20%;
+    }
+
+    .products-list ul li .normimg {
+        width: 30%;
+        height: 30%;
+    }
+
+    .VissionMission {
+        height: 650px;
+    }
+
+    .VissionMission img {
+        float: none
+    }
+
+    .VissionMission .row1 .coll {
+        padding-top: 20px;
+        padding-right: 5px;
+    }
+
+    .VissionMission .row2 .colr {
+        padding-top: 20px;
+        padding-left: 5px;
+    }
+
+    .MainActivities {
+        font-size: 15px;
+    }
+
+    .MainActivities h1 {
+        font-size: 30px;
+    }
+
+    .MainActivities .row2-p {
+        font-size: 15px;
+    }
+
+    /*Tomato all (Tomato_all.html)*/
+
+    .tomatoall-banner {
+        height: 150px;
+    }
+
+    .tomatoall-content .choto .row .col-4 {
+        width: 50%;
+    }
+
+    .tomatoall-content .choto .col-4 .row1 p {
+        font-size: 18px;
+    }
+
+    .tomatoall-content .choto2 .row .col-4 div a p {
+        font-size: 12px
+    }
+
+    /*Tomato one (Tomato_one.html)*/
+
+    .tomatoone-content p {
+        font-size: 13px;
+    }
+
+    .tomatoone-content ul li {
+        font-size: 13px;
+    }
+
+    .tomatoone-content .slogan h4 {
+        font-size: 13px;
+    }
+
+    .tomatoone-content .col2 .dwnld-button a img {
+        width: 27%;
+    }
+
+    .tomatoone-content .col2 .dwnld-button a {
+        font-size: 13px;
+    }
+
+    /*Contact us (Contact.html)*/
+
+    .contact-banner {
+        height: 160px;
+    }
+
+    .contact-info {
+        font-size: 13px;
+    }
+
+    .contact-info .contact-input {
+        height: 45px;
+    }
+
+    .contact-info .col2 .code-input {
+        margin-right: 0;
+        width: max-content;
+        height: 40px;
+    }
+
+    .contact-info .col2 .sumbit-button {
+        margin-top: 5px;
+        float: right;
+        width: 50%;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /*Homepage (index.html)*/
+    
+    .header-logo {
+        width: 120%;
+    }
+
+    .header-search {
+        font-size: 15px;
+    }
+
+    .homepage-banner .conteiner h1 {
+        font-size: 20px;
+        margin-top: 2%;
+    }
+
+    .products-list ul li {
+        width: 30%;
+        font-size: 13px
+    }
+
+    .VissionMission {
+        background-size: 150% auto;
+        height: 1300px;
+    }
+
+    .VissionMission .col-6 {
+        width: 100%;
+    }
+
+    .VissionMission .row2 .colr  {
+        padding: 0 5px 0 50px;
+    }
+
+    .VissionMission .row2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .MainActivities {
+        height: 980px;
+    }
+
+    .MainActivities .col-4 {
+        width: 100%;
+    }
+
+    .MainActivities .row3-p {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .footer .col1 ul li {
+        padding-top: 15px;
+        width: 40%;
+    }
+
+    .footer .col2 ul li {
+        padding-top: 5px;
+    }
+
+    /*Tomato all (Tomato_all.html)*/
+
+    .tomatoall-banner {
+        height: 120px;
+    }
+
+    .tomatoall-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .tomatoall-content h1 {
+        font-size: 25px;
+    }
+
+    .tomatoall-content p {
+        font-size: 13px;
+    }
+
+    .tomatoall-content .choto .col-4 .row1 p {
+        font-size: 15px;
+    }
+
+    .tomatoall-content .choto2 .row .col-4 div a h5 {
+        font-size: 15px;
+    }
+
+    .tomatoall-content .choto2 .row .col-4 div {
+        width: 89%;
+    }
+
+    /*Tomato one (Tomato_one.html)*/
+
+    .tomatoone-content {
+        height: 850px;
+    }
+
+    .tomatoone-content .link {
+        font-size: 14px;
+    }
+
+    .tomatoone-content h1 {
+        font-size: 20px;
+    }
+
+    .tomatoone-content h2 {
+        font-size: 17px;
+    }
+
+    .tomatoone-content .col2 .dwnld-button a img {
+        padding-left: 0;
+    }
+
+    .tomatoone-content .col2 .dwnld-button a img {
+        width: 25%;
+    }
+
+    .tomatoone-content .col2 .dwnld-button a {
+        font-size: 11px;
+    }
+
+    /*Contact us (Contact.html)*/
+
+    .contact-info .col-5 {
+        width: 100%;
+    }
+
+    .contact-info .col-7 {
+        width: 100%;
+    }
+
+    .contact-banner {
+        height: 120px;
+    }
+
+    .contact-info .sumbit-button {
+        margin-top: 15px;
+        margin-right: 65px;
+    }
+}
+
+@media (max-width: 400px) {
+    
+    /*Homepage (index.html)*/
+
+    .header-search {
+        font-size: 13px;
+    }
+
+    .header-logo {
+        width: 130%;
+    }
+
+    .homepage-banner .conteiner h1 {
+        font-size: 18px;
+        margin-top: 2%;
+    }
+
+    .homepage-banner .homepage-banner-button {
+        width: 20%;
+        font-size: 9px;
+    }
+
+    .VissionMission {
+        height: 1150px;
+    }
+
+    .MainActivities .row3-p {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .MainActivities h1 {
+        font-size: 25px;
+    }
+
+    /*Tomato all (Tomato_all.html)*/
+
+    .tomatoall-content .choto .row .col-4 {
+        width: 100%;
+    }
+
+    .tomatoall-content .choto2 .col-4 {
+        width: 100%;
+    }
+
+    .tomatoall-content .choto2 .row .col-4 div {
+        width: 93%;
+    }
+
+    .tomatoall-banner {
+        height: 100px;
+    }
+
+    /*Tomato one (Tomato_one.html)*/
+
+    .tomatoone-content .col-6 {
+        width: 100%;
+    }
+
+    .tomatoone-content {
+        height: 1225px;
+    }
+
+    .tomatoone-content .img {
+        display: none;
+    }
+
+    .tomatoone-content .col2 img {
+        display: none;
+    }
+
+    .tomatoone-content .col2 .dwnld-button {
+        display: none;
+    }
+
+    .mobile-photo-button {
+        display: block;
+    }
+
+    /*Contact us (Contact.html)*/
+
+    .contact-banner {
+        height: 100px;
+    }
+
+    .contact-info {
+        font-size: 12px;
+        padding-left: 50px;
+        padding-right: 40px;
+    }
+
+    .contact-info h1 {
+        font-size: 24px;
+    }
+
+    .contact-info .contact-input {
+        width: 90%;
+    }
+
+    .contact-info .sumbit-button {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 376px) {
+    
+    /*Homepage (index.html)*/
+
+    .homepage-banner .conteiner {
+        height: 100px;
+    }
+
+    /*Tomato all (Tomato_all.html)*/
+
+    .tomatoall-banner {
+        height: 90px;
+    }
+
+    /*Tomato one (Tomato_one.html)*/
+
+    .tomatoone-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /*Contact us (Contact.html)*/
+
+    .contact-banner {
+        height: 95px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    /*Homepage (index.html)*/
+    .header-search {
+        font-size: 10px;
+    }
+
+    .header-search {
+        font-size: 10px;
+    }
+
+    .homepage-banner .conteiner {
+        height: 80px;
+    }
+
+    .homepage-banner .conteiner h1 {
+        font-size: 15px;
+        margin-top: 0;
+    }
+
+    .homepage-banner .homepage-banner-button {
+        font-size: 8px;
+    }
+
+    .VissionMission {
+        font-size: 15px;
+        height: 1100px;
+    }
+
+    .VissionMission .row1 .coll {
+        padding-left: 40px;
+    }
+
+    .VissionMission .row2 .colr {
+        padding-left: 40px;
+    }
+
+    .MainActivities {
+        height: 1020px;
+    }
+
+    .footer .col-9 {
+        width: 100%;
+    }
+
+    .footer .col-3 {
+        width: 100%;
+    }
+
+    .footer .row2 {
+        height: 60px;
+    }
+
+    /*Tomato all (Tomato_all.html)*/
+
+    .tomatoall-banner {
+        height: 80px;
+    }
+
+    /*Contact us (Contact.html)*/
+
+    .contact-info .col2 .code-input {
+        width: 50%;
+    }
+
+    .contact-info .col2 .sumbit-button {
+        margin-right: 15px;
+    }
+}

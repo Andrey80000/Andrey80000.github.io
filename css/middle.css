@@ -1,0 +1,363 @@
+.clear {
+    clear: both;
+}
+
+/*Homepage (index.html)*/
+/*Продукти*/
+
+.products {
+    text-align: center;
+    height: max-content;
+}
+
+.products-list ul li {
+    list-style: none;
+    display: inline-block;
+    width: 14%;
+}
+
+.products-list {
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+/*VissionMission*/
+
+.VissionMission {
+    padding-top: 10px;
+    background: #F7F7F7 url('../images/Vision_Mission_background.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 950px;
+}
+
+.VissionMission img {
+    width: 100%;
+}
+
+.tochki {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color:#57984C;
+
+}
+
+.VissionMission .row1 {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.VissionMission .row1 img {
+    float: left;
+}
+
+.VissionMission .row1 .coll {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 70px;
+}
+
+.VissionMission .row2 {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.VissionMission .row2 img {
+    float: right;
+}
+
+.VissionMission .row2 .colr {
+    padding-right: 50px;
+    padding-top: 70px;
+}
+
+/*MainActivities*/
+
+.MainActivities {
+    height: 500px;
+    background: #EDEDED;
+    padding-top: 50px;
+}
+
+.MainActivities .col-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MainActivities .row1-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.MainActivities .row2 {
+    color: #57984C;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.MainActivities .row2 .row2-p {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    width: max-content;
+    border-bottom: 1px solid #57984C;
+}
+
+.MainActivities .row3 {
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/*Tomato all (Tomato_all.html)*/
+/*Контент*/
+
+.tomatoall-content {
+    padding-top: 35px;
+    background-color: #FCF0F0;
+}
+
+.tomatoall-content h1 {
+    font-size: 30px;
+}
+
+.tomatoall-content p {
+    font-size: 15px
+}
+.mega-p {
+    padding-top: 5px;
+    padding-left: 20px;
+    border-left: 5px solid #EB5757;
+    border-radius: 5px; /*Я не знаю як зробити повністю закруглену*/
+}
+
+.tomatoall-content .choto {
+    background-color: white;
+    padding: 30px 15px 20px;
+    margin-bottom: 20px;
+}
+
+.tomatoall-content .choto .col-4 .row1 {
+    height: 25%;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #324950;
+}
+
+.tomatoall-content .choto .col-4 .row1 p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tomatoall-content .choto .col-4 .row2 p {
+    padding-top: 10px;
+}
+
+.tomatoall-content .choto2 {
+    padding-top: 10px;
+}
+
+.tomatoall-content .choto2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tomatoall-content .choto2 .row {
+    padding-bottom: 30px;
+}
+
+.tomatoall-content .choto2 .row .col-4 {
+    padding-top: 20px;
+    position: relative;
+}
+
+.tomatoall-content .choto2 .row .col-4 div {
+    width: 93%;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+}
+
+.tomatoall-content .choto2 .row .col-4 div a {
+    color: #57984C;
+    text-decoration: none;
+}
+
+.tomatoall-content .choto2 .row .col-4 div a h5 {
+    margin: 0;
+}
+
+/*Tomato one (Tomato_one.html)*/
+
+.tomatoone-content {
+    background: #F7F7F7 url('../images/Tomatoone_content_background.png');
+    background-size: 75% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: max-content;
+    padding: 10px 0px 100px;
+}
+
+.tomatoone-content .link {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.tomatoone-content a {
+    color: #57984C;
+    text-decoration: none;
+}
+
+.tomatoone-content .caption {
+    color: #57984C;
+    font-weight: bold;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #57984C;
+    width: 30%;
+}
+
+.tomatoone-content .list {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.tomatoone-content .list li {
+    margin-bottom: 10px;
+}
+
+.tomatoone-content .list li::marker {
+    color: #57984C;
+}
+
+/*Ліва частина*/
+
+.tomatoone-content .col1 h2 {
+    color: #57984C;
+}
+
+.tomatoone-content .col1 .slogan {
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.tomatoone-content .col1 .slogan img {
+    width: 14%;
+    margin-right: 20px;
+    float: left;
+}
+
+.tomatoone-content .col1 .slogan h4 {
+    color: #CF2333;
+}
+
+/*Права частина*/
+
+.tomatoone-content .col2 img {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.tomatoone-content .col2 .dwnld-button {
+    width: max-content;
+    padding: 0 15px 0;
+    border: 3px solid #57984C;
+    border-radius: 50px;
+    white-space: nowrap;
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 20px;
+}
+
+.tomatoone-content .col2 .dwnld-button img {
+    width: 30%;
+    padding: 5px 10px 8px;
+    margin: 0;
+}
+
+/*Contact us (Contact.html)*/
+
+.contact-info {
+    height: max-content;
+    padding: 40px 0 30px;
+    background-color: #F7F7F7;
+}
+
+.contact-info p {
+    margin: 15px 0 5px;
+}
+
+.contact-info select {
+    width: 100%;
+    border: 1px solid lightgrey;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.contact-info .contact-input {
+    width: 80%;
+    border: 1px solid lightgrey;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.contact-info .col2 .contact-input {
+    width: 100%;
+}
+
+.contact-info .col2 textarea {
+    width: 100%;
+    height: 320px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.contact-info .col2 .code-input {
+    width: 39%;
+    border: 1px solid lightgrey;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.contact-info .col2 img {
+    padding-top: 10px;
+}
+
+.contact-info .col2 .sumbit-button {
+    color: white;
+    text-align: center;
+    background-color: #57984C;
+    border: 0;
+    border-radius: 50px;
+    width: 40%;
+    height: 50px;
+}
+
+.adress {
+    padding: 30px 0 20px;
+}
+
+.adress .conteiner .caption {
+    color: #57984C;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1.5px solid #57984C;
+    padding: 0 20px 8px;
+}
+
+.adress a {
+    color: #57984C;
+    text-decoration: none;
+}
+
+.adress .conteiner {
+    width: max-content;
+    margin: 0 auto;
+}
