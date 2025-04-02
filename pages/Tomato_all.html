@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/middle.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/chtoto.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=320, initial-scale=1.0"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body style="color: #324950; font-family: 'Roboto Slab';">
+        <header class="header">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-3">
+                        <img class="header-logo" src="../images/logo.png" alt="LOGO">
+                    </div>
+                    <div class="col-9">
+                        <div class="header-search">
+                            Search <input type="search" class="header-search-input"> <button class="header-search-button"><img src="../images/ico_search.png" alt="?"></button>
+                        </div>
+                        <div class="header-menu">
+                            <input type="checkbox" id="menu-toggle">
+                            <label for="menu-toggle" class="burger-menu">☰</label>
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="#">Company Profile</a></li>
+                                <li><a href="Tomato_all.html">Products</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">R & D</a></li>
+                                <li><a href="Contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="tomatoall-banner"></div>
+        <div class="tomatoall-content">
+            <div class="wrapper">
+                <h1>Agridera Fresh Market Bitter Pepper Hybrids</h1>
+                <div class="tochki">*****</div>
+                <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of bitter pepper seeds. <b>We invest intensively in research and development to provide solutions to growers and consumers in numerous countries around the world.</b>
+                In particular, we breed improved disease-resistant cultivars adapted to different markets globally.</p>
+                <p>Currently, emphasis is placed on combining resistance to common bitter pepper viruses with other soil borne diseases into superior bitter pepper breeding lines and hybrids. Moreover, comprehensive efforts are being undertaken to develop varieties resistant to new emerging threats.</p>
+                <p>In terms of horticultural traits, breeding is for earliness, different fruit sizes, firmness, deep red color, flavor, crack resistance, shelf life, and high/low temperature fruit set. Combinations of quality features and disease resistance are sought in a variety of types, namely long and round shapes.</p>
+                <p class="mega-p">Agridera Bitter Pepper breeding programs are focusing on three main segments: Greenhouse Bitter Peppers, Open-field Indeterminate Bitter Peppers, and Bush Type Open-field Bitter Peppers.</p>
+                <div class="choto">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="row1">
+                                <p>Greenhouse Bitter Pepper Breeding Program</p>
+                            </div>
+                            <div class="row2">
+                                <p><b>This breeding is aimed for the Spanish and Turkish markets.</b> For single and cluster picks, elongated fruit shape and multiple disease resistances. </p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row1">
+                                <p>Open-field Indeterminate Bitter Peppers</p>
+                            </div>
+                            <div class="row2">
+                                <p><b>This breeding is for Brazilian, Moroccan, and Turkish markets.</b> The main focus is on large elongated shape fruits; and resistances to multiple diseases.</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row1">
+                                <p>Open-field Bush Type Bitter Peppers</p>
+                            </div>
+                            <div class="row2">
+                                <p><b>This breeding is for Mediterranean markets.</b> We breed elongated and curved shapes, standard sizes, and large spicy varieties.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="mega-p"><b>Agridera operates through international and local distributers around the world. </b></p>
+                <div class="choto2" id="app">
+                    <div class="row row1 text-center">
+                        <div class="col-4" v-if="products" v-for="p in products">
+                            <img :src="'../product_images/' + p.image" alt="">
+                            <div>
+                                <a :href="'Tomato_one.html#'+p.id">
+                                    <h5>{{p.title}}</h5>
+                                    <p>{{p.short_text}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <script src="../js/main.js"></script>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="row row1">
+                    <div class="col-9 col1">
+                        <ul>
+                            <li><a href="#">PROFILE</a></li>
+                            <li><a href="#">MANAGMENT</a></li>
+                            <li><a href="#">PRODUCT</a></li>
+                            <li><a href="#">R&D</a></li>
+                            <li><a href="#">LINKS</a></li>
+                            <li><a href="#">SITEMAP</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3 col2">
+                        <ul>
+                            <li><a href="#"><img src="../images/Ico_in.png" alt=""></a></li>
+                            <li><a href="#"><img src="../images/Ico_inst.png" alt=""></a></li>
+                            <li><a href="#"><img src="../images/Ico_tube.png" alt=""></a></li>
+                            <li><a href="#"><img src="../images/Ico_tw.png" alt=""></a></li>
+                            <li><a href="#"><img src="../images/Ico_fb.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row row2 text-center">
+                <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+            </div>
+        </footer>
+    </body>
+</html>
