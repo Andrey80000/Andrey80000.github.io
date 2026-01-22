@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+#left-area {
+    order: 2;
+}
+
+.header {
+    background-color: #3a3a3a;
+    padding: 10px;
+}
+
+.header .wrapper .logo {
+    order: 2;
+    display: flex;
+    justify-content: end;
+    margin-right: 5px;
+}
+
+.header .wrapper .al {
+    order: 1;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+
+.inner-form {
+    padding: 100px;
+}
+
+.inner-form .row {
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+}
+
+.inner-form .row label {
+    margin-bottom: 7px;
+    align-self: end;
+    font-weight: bold;
+}
+
+.inner-form .row input {
+    padding: 15px;
+    text-align: right;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.inner-form .row .btn {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00c477;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.inner-form .row .btn:hover {
+    background-color: #1b7d82;
+}
+
+#right-area {
+    order: 1;
+    height: 100vh;
+}
+
+#right-area img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.alertMsg {
+    font-size: inherit;
+    padding: 20px;
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    border-radius: 10px;
+    z-index: 999;
+    height: auto;
+    display: none;
+    color: red;
+    background-color: rgba(255, 228, 228, 0.75);
+    box-shadow: 0px 0 10px 0px rgba(205, 30, 11, 0.5);
+    animation: showFromLeft 0.3s linear;
+}
+
+.successMsg {
+    font-size: inherit;
+    padding: 20px;
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    border-radius: 10px;
+    z-index: 999;
+    height: auto;
+    display: none;
+    color: green;
+    background-color: rgba(218, 249, 223, 0.75);
+    box-shadow: 0px 0 10px 0px rgba(11 205 61 / 50%);
+    animation: showFromLeft 0.3s normal;
+}
+
+@keyframes showFromLeft {
+    0% {opacity: 0; margin-left: -100%;}
+    25% {opacity: 0.2; margin-left: -50%;}
+    35% {opacity: 0.4; margin-left: -20%;}
+    50% {opacity: 0.8; margin-left: -15%;}
+    65% {opacity: 0.9; margin-left: -12%;}
+    75% {opacity: 0.9; margin-left: -10%;}
+    80% {opacity: 0.9; margin-left: -8%;}
+    85% {opacity: 0.95; margin-left: -6%;}
+    90% {opacity: 0.95; margin-left: -4%;}
+    95% {opacity: 0.95; margin-left: -2%;}
+    100% {opacity: 1; margin-left: 0;}
+}

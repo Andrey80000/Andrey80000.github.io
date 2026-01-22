@@ -1,10 +1,11 @@
 import {router} from './router.js'
+import {msg} from './widgets/msg.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const main = {
         data() {
             return {
-                url:"",
+                url:"http://affiliate.yanbasok.com",
                 user: {name:"", phone:"", email:"", date:"", auth:""},
                 formData: {},
                 title: "",
@@ -23,9 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
         methods:{
             init() {
                 var self = this;
+                if (window.localStorage.getItem('user')) self.user = JSON.parse(window.localStorage.getItem('user'));
 
                 router.isReady().then(() => {
-                    self.page('/');
+                    if (window.localStorage.getItem("user")) {
+                        if (self.$route['path'] == '/' && self.user.type == 'admin') {
+                            self.page('/campaigns');
+                        }
+                    } else {
+                        self.page('/');
+                    }
                 });
             },
             logout() {
@@ -38,11 +46,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.title=this.$route['name'];
                 document.title=this.$route['name'];
             },
-            toFormData: function(obj) { }
+            toFormData: function(obj) {
+                var fd = new FormData();
+
+                for (var x in obj) {
+                    if (typeof obj[x] === 'object' && x != 'img' && x != 'copy') {
+                        for (var y in obj[x]) {
+                            if (typeof obj[x] === 'object') {
+                                for (var z in obj[x][y]) {
+                                    fd.append(x+'['+y+']['+z+']', obj[x][y][z]);
+                                }
+                            } else {
+                                fd.append(x+'['+y+']', obj[x][y]);
+                            }
+                        }
+                    } else if (x != 'copy') {
+                        fd.append(x, obj[x]);
+                    }
+                }
+
+                return fd;
+            }
         }
     };
 
     var app = Vue.createApp(main)
+    .component('msg', msg)
     .use(router)
     .mount('#content')
 });
