@@ -52,7 +52,7 @@ export const campaigns = {
             self.parent.formData.copy = "";
             var data = self.parent.toFormData(self.parent.formData);
 
-            axois.post(this.parent.url + "/site/actionCampaign?auth=" + this.parent.user.auth, data).then(function(response) {
+            axios.post(this.parent.url + "/site/actionCampaign?auth=" + this.parent.user.auth, data).then(function(response) {
                 self.$refs.new.active = 0;
                 if (self.parent.formData.id) {
                     self.$refs.header.$refs.msg.successFun("Successfully updated campaign!");
@@ -95,10 +95,24 @@ export const campaigns = {
                     </div>
                     <div class="w60 ptb20 ac" style="order: 1"><input class="input-date" type="date" v-model="date" @change="get()" /> - <input class="input-date" type="date" v-model="date2" @change="get()" /></div>
                     <div class="w20 al ptb20">
-
+                        <a class="btnS" href="#" @click.prevent="parent.formData={};$refs.new.active=1"><i class="fas fa-plus"></i> New</a>
                     </div>
                 </div>
+                <popup ref="new" :title="(parent.formData && parent.formData.id) ? 'Edit campaigh' : 'New campaign'">
+                    <div class="form inner-form">
+                        <form @submit.prevent="action()" v-if="parent.formData">
+                            <div class="row">
+                                <label>Name</label>
+                                <input type="text" v-model="parent.formData.title" required>
+                            </div>
 
+                            <div class="row">
+                                <button class="btn" v-if="parent.formData && parent.formData.id">Edit</button>
+                                <button class="btn" v-if="parent.formData && !parent.formData.id">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </popup>
                 <div class="table" v-if="data.items!=''">
                     <table>
                         <thead>
@@ -117,7 +131,7 @@ export const campaigns = {
                             <tr v-for="(item, i) in data.items">
                                 <td class="id">{{item.id}}</td>
                                 <td class="id">
-
+                                    <toogle v-model="item.published" @update:modelValue="parent.formData = item;action();" />
                                 </td>
                                 <td class="title"><router-link :to="'/campaign' + item.id">{{item.title}}</router-link></td>
                                 <td class="id">

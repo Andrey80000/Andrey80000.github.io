@@ -4,30 +4,43 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .flex {
     display: flex;
 }
 
-.w60 {
-    width: 60%;
-}
-
-.w40 {
-    width: 40%;
+.w10 {
+    width: 10%;
 }
 
 .w20 {
     width: 20%;
 }
 
-.ptb30 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+.w40 {
+    width: 40%;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w70 {
+    width: 70%;
 }
 
 .ptb20 {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.ptb30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .al {
@@ -51,9 +64,12 @@
     margin: 0 auto;
 }
 
-#left-area .header {
+.header {
     background-color: #3a3a3a;
-    padding: 10px;
+}
+
+#left-area .header {
+    padding-left: 10px;
 }
 
 .header .wrapper .logo {
@@ -61,17 +77,17 @@
     display: flex;
     justify-content: end;
     margin-right: 5px;
+    padding: 10px;
 }
 
 .header .wrapper .al {
-    order: 1;
     display: flex;
     align-items: center;
     color: white;
     font-size: 12px;
 }
 
-.inner-form {
+#left-area .inner-form {
     padding: 100px;
 }
 
@@ -152,10 +168,6 @@
     animation: showFromLeft 0.3s normal;
 }
 
-.popup {
-    position: fixed;
-}
-
 @keyframes showFromLeft {
     0% {opacity: 0; margin-left: -100%;}
     25% {opacity: 0.2; margin-left: -50%;}
@@ -187,11 +199,6 @@
     border-radius: 5px;
     padding: 9px 15px;
     font-weight: bolder;
-}
-
-a {
-    text-decoration: none;
-    color: black;
 }
 
 .panel {
@@ -236,6 +243,7 @@ a {
 }
 
 .popup {
+    position: fixed;
     width: 500px;
     background-color: white;
 }
@@ -255,6 +263,8 @@ a {
 }
 
 .popup-back {
+    top: 0;
+    left: 0;
     position: fixed;
     background-color: gray;
     opacity: 0.5;
@@ -278,4 +288,143 @@ a {
 
 .btnS:hover {
     background-color: #1b7d82;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+}
+
+.switch input {display: none;}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 0;
+    bottom: -1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0px 0 10px 0px rgba(70, 70, 70, 0.3);
+}
+
+input:checked + .slider {
+    background-color: #00cb84;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #00cb84;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.active {
+    visibility: visible;
+}
+
+.user-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background-color: #1e1e1e;
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#user-info {
+    position: fixed;
+    background-color: white;
+    padding: 20px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    display: none;
+    left: 15%;
+    top: 9%;
+    z-index: 999;
+    animation: showFromUp 0.5s normal;
+}
+
+#user-info.active {
+    display: block;
+}
+
+@keyframes showFromUp {
+    from {opacity: 0; margin-top: -100%;}
+    to {opacity: 1; margin-top: 0;}
+}
+
+#menu {
+    height: 100%;
+}
+
+#menu ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#menu ul li {
+    list-style-type: none;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 20px;
+    border-bottom: 4px solid transparent;
+    transition: background-color 0.3s;
+}
+
+#menu ul li:hover {
+    background-color: #323232;
+}
+
+#menu ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;    
+    height: 100%;
+    color: white;
+    transition: color 0.5s;
+}
+
+#menu ul li:hover a {
+    color: #00cb84;
+}
+
+#menu ul li .router-link-active {
+    color: #00cb84;
+}
+
+#menu ul li:has(.router-link-active) {
+    border-bottom: 4px solid #00cb84;
 }
