@@ -51,6 +51,26 @@ export const campaign = {
                 self.parent.logout();
             });
         },
+        getCampaignBannersChart: function() {
+            var self = this;
+            var data = self.parent.toFormData(self.parent.formData);
+            if (this.date != "") data.append('date', this.date);
+            if (this.date2 != "") data.append('date2', this.date2);
+            if (this.q != "") data.append('q', this.q);
+            if (this.sort != "") data.append('sort', this.sort);
+            self.loader = 1;
+            axios.post(this.parent.url + "/site/getCampaignBannersChart?auth=" + this.parent.user.auth, data).then(function(response) {
+                self.parent.formData.views = response.data.items.views;
+                self.parent.formData.clicks = response.data.items.clicks;
+                self.parent.formData.line = response.data.items.line;
+                self.parent.formData.sites = response.data.items.sites;
+                self.line(response.data.items);
+                self.loader = 0;
+            }).catch(function(error) {
+                console.log(error);
+                self.parent.logout();
+            });
+        },
         getDetails: function(bid=false, type=false) {
             this.details = {};
             if (bid) this.id = bid;
@@ -240,7 +260,7 @@ export const campaign = {
                 </div>
                 <popup ref="chart" fullscreen="true" title="Chart">
                     <div class="flex panel">
-                        <div class="w30 ptb25 al"><input class="input-date" type="date" v-model="date" @change="get()" /> - <input class="input-date" type="date" v-model="date2" @change="get()" /></div>
+                        <div class="w30 ptb25 al"><input class="input-date" type="date" v-model="date" @change="getCampaignBannersChart()" /> - <input class="input-date" type="date" v-model="date2" @change="getCampaignBannersChart()" /></div>
                         <div class="w70 al">
                             <div class="flex cubes">
                                 <div class="w30 clicks">
@@ -269,7 +289,7 @@ export const campaign = {
                                 All
                             </div>
                             <div class="itemchart ptb10" v-if="data.items[iChart].sites" v-for="s in data.items[iChart].sites">
-                                <toogle v-model="s.include" @update:modelValue="s.include = $event;parent.formData = data.items[iChart];get()" />
+                                <toogle v-model="s.include" @update:modelValue="s.include = $event;parent.formData = data.items[iChart];getCampaignBannersChart()" />
                                 {{s.site}}
                             </div>
                         </div>
@@ -395,7 +415,7 @@ export const campaign = {
                                     <a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="#" @click.prevent="parent.formData = item;iChart = i;$refs.chart.active=1;line(item)">
+                                    <a href="#" @click.prevent="parent.formData = item;iChart = i;$refs.chart.active=1;getCampaignBannersChart()">
                                         <i class="fas fa-chart-bar"></i>
                                     </a>
                                     <a href="#" @click.prevent = "parent.formData = item;delAd();">

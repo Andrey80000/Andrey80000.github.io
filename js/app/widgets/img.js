@@ -1,8 +1,8 @@
 export var img = {
     data: function() {
         return {
-            value: "",
-            parent: ""
+            parent: "",
+            value: ""
         }
     },
     mounted() {

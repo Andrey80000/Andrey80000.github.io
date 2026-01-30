@@ -49,6 +49,26 @@ export const campaigns = {
                 self.parent.logout();
             });
         },
+        getCampaignChart: function() {
+            var self = this;
+            var data = self.parent.toFormData(self.parent.formData);
+            if (this.date != "") data.append('date', this.date);
+            if (this.date2 != "") data.append('date2', this.date2);
+            if (this.q != "") data.append('q', this.q);
+            if (this.sort != "") data.append('sort', this.sort);
+            self.loader = 1;
+            axios.post(this.parent.url + "/site/getCampaignChart?auth=" + this.parent.user.auth, data).then(function(response) {
+                self.parent.formData.views = response.data.items.views;
+                self.parent.formData.clicks = response.data.items.clicks;
+                self.parent.formData.line = response.data.items.line;
+                self.parent.formData.sites = response.data.items.sites;
+                self.line(response.data.items);
+                self.loader = 0;
+            }).catch(function(error) {
+                console.log(error);
+                self.parent.logout();
+            });
+        },
         action: function() {
             var self = this;
             self.parent.formData.copy = "";
@@ -175,7 +195,7 @@ export const campaigns = {
                 }
             }
             this.parent.formData = this.data.items[this.iChart];
-            this.get();
+            this.getCampaignChart();
         }
     },
     template: `
@@ -194,7 +214,7 @@ export const campaigns = {
                 </div>
                 <popup ref="chart" fullscreen="true" title="Chart">
                     <div class="flex panel">
-                        <div class="w30 ptb25 al"><input class="input-date" type="date" v-model="date" @change="get()" /> - <input class="input-date" type="date" v-model="date2" @change="get()" /></div>
+                        <div class="w30 ptb25 al"><input class="input-date" type="date" v-model="date" @change="getCampaignChart()" /> - <input class="input-date" type="date" v-model="date2" @change="getCampaignChart()" /></div>
                         <div class="w70 al">
                             <div class="flex cubes">
                                 <div class="w30 clicks">
@@ -223,7 +243,7 @@ export const campaigns = {
                                 All
                             </div>
                             <div class="itemchart ptb10" v-if="data.items[iChart].sites" v-for="s in data.items[iChart].sites">
-                                <toogle v-model="s.include" @update:modelValue="s.include = $event;parent.formData = data.items[iChart];get()" />
+                                <toogle v-model="s.include" @update:modelValue="s.include = $event;parent.formData = data.items[iChart];getCampaignChart()" />
                                 {{s.site}}
                             </div>
                         </div>
