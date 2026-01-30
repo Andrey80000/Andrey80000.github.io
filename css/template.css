@@ -21,8 +21,16 @@ a {
     width: 20%;
 }
 
+.w30 {
+    width: 30%;
+}
+
 .w40 {
     width: 40%;
+}
+
+.w50 {
+    width: 50%;
 }
 
 .w60 {
@@ -33,9 +41,19 @@ a {
     width: 70%;
 }
 
+.ptb10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .ptb20 {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.ptb25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .ptb30 {
@@ -225,6 +243,11 @@ a {
     border: 1px solid #dde2dd;
 }
 
+.table .image img {
+    width: 30%;
+    height: 30%;
+}
+
 .table tr:nth-child(odd) {
     background-color: #f3f3f3;
 }
@@ -238,13 +261,23 @@ a {
     text-align: end;
 }
 
-.table .actions {
+.table thead .actions {
     width: 10%;
 }
 
+.table tbody .actions {
+    width: 10%;
+}
+
+.table tbody .actions a {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
 .popup {
+    z-index: 999999;
     position: fixed;
-    width: 500px;
+    width: 100%;
     background-color: white;
 }
 
@@ -256,6 +289,7 @@ a {
 
 .popup .head-popup .head-title {
     margin-right: 10px;
+    font-weight: bold;
 }
 
 .popup .popup-inner {
@@ -427,4 +461,80 @@ input:checked + .slider:before {
 
 #menu ul li:has(.router-link-active) {
     border-bottom: 4px solid #00cb84;
+}
+
+.cubes {
+    height: 80px;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    font-size: 25px;
+}
+
+.cubes .w30 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.cubes .clicks {
+    background-color: #004e93;
+}
+
+.cubes .views {
+    background-color: #4700ae;
+}
+
+.cubes .leads {
+    background-color: #319201;
+}
+
+.cubes .ctr {
+    color: black;
+}
+
+.cubes .w30 div {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#chartOuter {
+    margin-top: 20px;
+}
+
+#chartHints {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filchart {
+    background-color: #f6f6f6;
+}
+
+.filchart .itemchart {
+    margin-left: 15px;
+}
+
+.image-preview-area {
+    border: 1px solid lightgrey;
+    text-align: center;
+}
+
+.image-preview-area img {
+    width: 25%;
+    height: 25%;
+}
+
+.panelTop {
+    background-color: #d5f3ec;
+}
+
+.panelTop .wrapper .flex {
+    align-items: center;
 }
