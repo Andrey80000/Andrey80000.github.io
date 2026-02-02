@@ -46,6 +46,11 @@ a {
     padding-bottom: 10px;
 }
 
+.ptb15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .ptb20 {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -59,6 +64,10 @@ a {
 .ptb30 {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.pb0 {
+    padding-bottom: 0;
 }
 
 .al {
@@ -229,6 +238,7 @@ a {
 }
 
 .table table {
+    width: 100%;
     border: 1px solid #dde2dd;
     border-collapse: collapse;
 }
@@ -274,6 +284,21 @@ a {
     margin-right: 4px;
 }
 
+.table .name {
+    width: 25%;
+    text-align: end;
+}
+
+.table .phone {
+    width: 20%;
+    text-align: end;
+}
+
+.table .email {
+    width: 30%;
+    text-align: end;
+}
+
 .popup {
     z-index: 999999;
     position: fixed;
@@ -294,6 +319,12 @@ a {
 
 .popup .popup-inner {
     padding: 20px 15px;
+}
+
+.popup textarea {
+    border-radius: 10px;
+    height: 150px;
+    padding: 5px;
 }
 
 .popup-back {
@@ -537,4 +568,36 @@ input:checked + .slider:before {
 
 .panelTop .wrapper .flex {
     align-items: center;
+}
+
+.tabs ul{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.tabs ul li {
+    list-style-type: none;
+    color: #8b8686;
+    font-weight: bold;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 7px;
+    border-left: 2px solid lightgray;
+    border-top: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+    border-bottom: 4px solid lightgray;
+    transition: background-color 0.3s;
+}
+
+.tabs ul li:hover {
+    background-color: #d5f3ec;
+}
+
+.tabs ul .active {
+    border-bottom: 4px solid #00cb84;
+    color: black;
 }
