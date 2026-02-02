@@ -578,6 +578,7 @@ input:checked + .slider:before {
 }
 
 .tabs ul li {
+    cursor: pointer;
     list-style-type: none;
     color: #8b8686;
     font-weight: bold;
@@ -600,4 +601,5 @@ input:checked + .slider:before {
 .tabs ul .active {
     border-bottom: 4px solid #00cb84;
     color: black;
+
 }
