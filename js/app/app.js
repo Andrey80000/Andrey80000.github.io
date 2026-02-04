@@ -32,8 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 router.isReady().then(() => {
                     if (window.localStorage.getItem("user")) {
+                        self.user = JSON.parse(window.localStorage.getItem("user"));
                         if (self.$route['path'] == '/' && self.user.type == 'admin') {
                             self.page('/campaigns');
+                        } else if (['/campaigns', '/campaign', '/users', '/user'].includes(self.$route['path']) && self.user.type != 'admin') {
+                            self.page('/statistics');
+                        } else if (['/statistics', '/payments', '/sites'].includes(self.$route['path']) && self.user.type == 'admin') {
+                            self.page('/campaigns');
+                        } else if (['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path'])) {
+                            self.page();
+                        } else if (!['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path'])) {
+                            self.page();
                         }
                     } else {
                         self.page('/');

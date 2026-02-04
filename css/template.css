@@ -253,6 +253,10 @@ a {
     border: 1px solid #dde2dd;
 }
 
+.table .image {
+    width: 20%;
+}
+
 .table .image img {
     width: 30%;
     height: 30%;
@@ -601,5 +605,4 @@ input:checked + .slider:before {
 .tabs ul .active {
     border-bottom: 4px solid #00cb84;
     color: black;
-
 }
