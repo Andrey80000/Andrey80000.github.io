@@ -204,11 +204,11 @@ export const campaigns = {
             <div id="spinner" v-if="loader"></div>
             <div class="wrapper">
                 <div class="flex panel">
-                    <div class="w40 ptb30" style="order: 2">
+                    <div class="w40 ptb30 al">
                         <h1>Campaigns</h1>
                     </div>
-                    <div class="w60 ptb20 ac" style="order: 1"><input class="input-date" type="date" v-model="date" @change="get()" /> - <input class="input-date" type="date" v-model="date2" @change="get()" /></div>
-                    <div class="w20 al ptb20">
+                    <div class="w60 ptb20 al"><input class="input-date" type="date" v-model="date" @change="get()" /> - <input class="input-date" type="date" v-model="date2" @change="get()" /></div>
+                    <div class="w20 ar ptb20">
                         <a class="btnS" href="#" @click.prevent="parent.formData={};$refs.new.active=1"><i class="fas fa-plus"></i> New</a>
                     </div>
                 </div>
