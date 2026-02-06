@@ -16,6 +16,7 @@ export const statistics = {
             this.parent.logout();
         }
 
+        // this.GetFirstAndLastDate();
         this.get();
     },
     methods: {
@@ -31,6 +32,8 @@ export const statistics = {
         get: function() {
             var self = this;
             var data = self.parent.toFormData(self.parent.formData);
+            data.append('id', this.parent.user.id);
+            data.append('type', 'user');
             if (this.date != "") data.append('date', this.date);
             if (this.date2 != "") data.append('date2', this.date2);
             if (this.type != "") data.append('type', this.type);
@@ -39,6 +42,7 @@ export const statistics = {
                 self.data = response.data;
                 self.loader = 0;
                 if (response.data.types && response.data.types[0] && !self.type) self.type = response.data.types[0].id;
+                self.parent.formData.copy = self.data.multi;
             }).catch(function(error) {
                 self.parent.logout();
             });
